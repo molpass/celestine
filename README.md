@@ -7,6 +7,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18-green?style=flat-square&logo=node.js)](https://nodejs.org/)
+[![Live Demo](https://img.shields.io/badge/demo-cosmolytic.com-7c3aed?style=flat-square)](https://cosmolytic.com)
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/Anonyfox/celestine/main/assets/celestine-logo.png" alt="Celestine Logo" width="400" />
@@ -15,6 +16,10 @@
 **No bullshit astrology calculations.** Celestine is a TypeScript library for birth charts, transits, progressions, and everything else you need for serious astrological software. Every single calculation is validated against NASA data, JPL Horizons, and Swiss Ephemeris — not "inspired by" or "based on", but byte-for-byte verified against the actual sources astronomers use.
 
 Built for practitioners who actually care about precision. 2400+ unit tests. Zero runtime dependencies. If the math is wrong, your tests will catch it. If NASA says Mars is at 127.4532°, Celestine gives you 127.4532°. Not 127.45° or "close enough" — the real number, every time.
+
+## See it in Action
+
+**[Cosmolytic](https://cosmolytic.com)** is built entirely on Celestine — live planetary positions, moon phases, daily horoscopes, birth charts, the works. If you want to see what these calculations look like in a real product, that's your live demo.
 
 ## Features
 
