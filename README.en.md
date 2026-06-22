@@ -1,7 +1,5 @@
 # Celestine ✨
 
-> 🇰🇷 이 저장소는 **molpass가 포크한 사본**입니다. 영어 원문은 [README.en.md](./README.en.md)를 참고하세요.
-
 [![npm version](https://img.shields.io/npm/v/celestine.svg?style=flat-square)](https://www.npmjs.com/package/celestine)
 [![npm downloads](https://img.shields.io/npm/dm/celestine.svg?style=flat-square)](https://www.npmjs.com/package/celestine)
 [![CI](https://img.shields.io/github/actions/workflow/status/Anonyfox/celestine/ci.yml?branch=main&label=CI&style=flat-square)](https://github.com/Anonyfox/celestine/actions/workflows/ci.yml)
@@ -15,40 +13,40 @@
   <img src="https://raw.githubusercontent.com/Anonyfox/celestine/main/assets/celestine-logo.png" alt="Celestine Logo" width="400" />
 </div>
 
-**군더더기 없는 점성술 계산.** Celestine은 출생 차트(birth chart), 트랜짓(transit), 프로그레션(progression), 그리고 진지한 점성술 소프트웨어에 필요한 모든 것을 위한 TypeScript 라이브러리입니다. 모든 계산은 NASA 데이터, JPL Horizons, 그리고 Swiss Ephemeris에 대해 검증됩니다 — "영감을 받았다"거나 "기반으로 했다"가 아니라, 천문학자들이 실제로 사용하는 원천 데이터와 바이트 단위로 일치하도록 검증됩니다.
+**No bullshit astrology calculations.** Celestine is a TypeScript library for birth charts, transits, progressions, and everything else you need for serious astrological software. Every single calculation is validated against NASA data, JPL Horizons, and Swiss Ephemeris — not "inspired by" or "based on", but byte-for-byte verified against the actual sources astronomers use.
 
-정밀도를 진정으로 중시하는 실무자를 위해 만들어졌습니다. 2400개 이상의 단위 테스트. 런타임 의존성 0개. 계산이 틀리면 테스트가 잡아냅니다. NASA가 화성이 127.4532°에 있다고 하면, Celestine도 127.4532°를 줍니다. 127.45°나 "대충 그 정도"가 아니라 — 매번 정확한 실제 숫자를 줍니다.
+Built for practitioners who actually care about precision. 2400+ unit tests. Zero runtime dependencies. If the math is wrong, your tests will catch it. If NASA says Mars is at 127.4532°, Celestine gives you 127.4532°. Not 127.45° or "close enough" — the real number, every time.
 
-## 실제 동작 보기
+## See it in Action
 
-**[Cosmolytic](https://cosmolytic.com)**은 전적으로 Celestine 위에 구축되었습니다 — 실시간 행성 위치, 달의 위상, 일일 운세, 출생 차트 등 모든 것을 다룹니다. 이 계산들이 실제 제품에서 어떻게 보이는지 확인하고 싶다면, 그것이 바로 여러분의 라이브 데모입니다.
+**[Cosmolytic](https://cosmolytic.com)** is built entirely on Celestine — live planetary positions, moon phases, daily horoscopes, birth charts, the works. If you want to see what these calculations look like in a real product, that's your live demo.
 
-## 기능 Features
+## Features
 
-- ✅ **출생 차트(Birth Charts)** - 모든 모듈을 하나의 일관된 API로 결합한 완전한 차트 계산
-- ✅ **천체력(Ephemeris)** - 태양, 달, 모든 행성, 키론(Chiron), 4대 소행성, 달의 교점, 릴리스(Lilith), 파트(lots)
-- ✅ **JPL/Swiss Ephemeris 검증** - 권위 있는 천문 데이터에 대해 검증된 위치 값
-- ✅ **시간 계산(Time Calculations)** - 율리우스일, 율리우스 세기, 항성시, ΔT 보정
-- ✅ **NASA 검증** - 공식 NASA 기준 데이터에 대해 테스트된 시간 계산
-- ✅ **하우스 시스템(House Systems)** - 7종(Placidus, Koch, Equal, Whole Sign, Porphyry, Regiomontanus, Campanus)
-- ✅ **천문학적 검증** - 기본 천문학 원리에 대해 검증된 하우스 계산
-- ✅ **황도대 시스템(Zodiac System)** - 회귀 황도대(tropical zodiac), 별자리·품위(dignity)·완전한 메타데이터 포함
-- ✅ **전통 점성술(Traditional Astrology)** - 행성 지배(rulership)와 본질적 품위(essential dignities) (Ptolemy, Lilly)
-- ✅ **역행 감지(Retrograde Detection)** - 모든 천체의 역행 운동 자동 감지
-- ✅ **애스펙트(Aspects)** - 14종 애스펙트(메이저·마이너·케플러), 패턴, 오브(orb), 접근/분리(applying/separating)
-- ✅ **트랜짓(Transits)** - 정확한 타이밍, 하우스 진입, 역행 처리를 갖춘 예측 점성술
-- ✅ **프로그레션(Progressions)** - 2차 프로그레션, 솔라 아크 디렉션, 달의 위상 및 별자리 이동
-- 🔒 **타입 안전(Type-safe)** - 포괄적인 타입을 갖춘 완전한 TypeScript 지원
-- 🧪 **충분한 테스트** - 2400개 이상의 단위 테스트
-- 🚀 **런타임 의존성 0개** - 가볍고 빠름
+- ✅ **Birth Charts** - Complete chart calculation combining all modules into a cohesive API
+- ✅ **Ephemeris** - Sun, Moon, all planets, Chiron, 4 major asteroids, lunar nodes, Lilith, lots
+- ✅ **JPL/Swiss Ephemeris Verified** - Positions validated against authoritative astronomical data
+- ✅ **Time Calculations** - Julian dates, Julian centuries, sidereal time, ΔT corrections
+- ✅ **NASA Verified** - Time calculations tested against official NASA reference data
+- ✅ **House Systems** - 7 systems (Placidus, Koch, Equal, Whole Sign, Porphyry, Regiomontanus, Campanus)
+- ✅ **Astronomically Verified** - House calculations verified against fundamental astronomical principles
+- ✅ **Zodiac System** - Tropical zodiac with signs, dignities, and complete metadata
+- ✅ **Traditional Astrology** - Planetary rulerships and essential dignities (Ptolemy, Lilly)
+- ✅ **Retrograde Detection** - Automatic retrograde motion detection for all bodies
+- ✅ **Aspects** - 14 aspect types (major, minor, Kepler), patterns, orbs, applying/separating
+- ✅ **Transits** - Predictive astrology with exact timing, house ingress, retrograde handling
+- ✅ **Progressions** - Secondary progressions, solar arc directions, Moon phases and sign transits
+- 🔒 **Type-safe** - Full TypeScript support with comprehensive types
+- 🧪 **Well-tested** - 2400+ unit tests
+- 🚀 **Zero runtime dependencies** - Lightweight and fast
 
-## 설치 Installation
+## Installation
 
 ```bash
 npm install celestine
 ```
 
-## 빠른 시작 Quick Start
+## Quick Start
 
 ```typescript
 import { calculateChart, ephemeris, time, zodiac } from "celestine";
@@ -84,11 +82,11 @@ const marsAries = zodiac.getPlanetaryDignity(
 console.log(marsAries.state); // "Domicile" (Mars rules Aries)
 ```
 
-## 사용법 Usage
+## Usage
 
-### 천체력(Ephemeris) — 행성 위치
+### Ephemeris (Planetary Positions)
 
-JPL Horizons와 Swiss Ephemeris에 대해 검증된, 임의의 순간에서의 천체 정밀 위치를 계산합니다.
+Calculate precise positions of celestial bodies at any moment, validated against JPL Horizons and Swiss Ephemeris.
 
 ```typescript
 import { ephemeris, time } from "celestine";
@@ -121,28 +119,28 @@ const sign = ephemeris.getSign(ephemeris.CelestialBody.Venus, jd);
 console.log(sign); // "Sagittarius"
 ```
 
-**지원 천체:**
+**Available Bodies:**
 
-- **광체(Luminaries)**: 태양, 달
-- **고전 행성(Classical Planets)**: 수성, 금성, 화성, 목성, 토성
-- **현대 행성(Modern Planets)**: 천왕성, 해왕성, 명왕성
-- **켄타우로스(Centaur)**: 키론(Chiron)
-- **소행성(Asteroids)**: 세레스(Ceres), 팔라스(Pallas), 주노(Juno), 베스타(Vesta)
-- **달의 교점(Lunar Nodes)**: 평균 교점(Mean Node), 진교점(True Node) (북·남)
-- **릴리스(Lilith)**: 평균 릴리스(Mean Lilith), 진릴리스(True Lilith, 블랙문)
-- **파트(Lots)**: 행운의 점(Part of Fortune), 정신의 점(Part of Spirit)
+- **Luminaries**: Sun, Moon
+- **Classical Planets**: Mercury, Venus, Mars, Jupiter, Saturn
+- **Modern Planets**: Uranus, Neptune, Pluto
+- **Centaur**: Chiron
+- **Asteroids**: Ceres, Pallas, Juno, Vesta
+- **Lunar Nodes**: Mean Node, True Node (North & South)
+- **Lilith**: Mean Lilith, True Lilith (Black Moon)
+- **Lots**: Part of Fortune, Part of Spirit
 
-**특징:**
+**Features:**
 
-- 지심(geocentric) 황도 좌표(경도, 위도, 거리)
-- longitudeSpeed를 통한 자동 역행 감지
-- 1800–2200년에 대해 ±1 각분(arcminute) 정확도
-- Jean Meeus의 "Astronomical Algorithms"와 VSOP87 이론에 기반
-- 모든 위치가 JPL Horizons 및 Swiss Ephemeris 기준 데이터에 대해 검증됨
+- Geocentric ecliptic coordinates (longitude, latitude, distance)
+- Automatic retrograde detection via longitudeSpeed
+- ±1 arcminute accuracy for years 1800-2200
+- Based on Jean Meeus' "Astronomical Algorithms" and VSOP87 theory
+- All positions validated against JPL Horizons and Swiss Ephemeris reference data
 
-### 시간 계산 Time Calculations
+### Time Calculations
 
-Time 모듈은 NASA 기준 데이터에 대해 모두 검증된 포괄적인 천문 시간 계산을 제공합니다.
+The Time module provides comprehensive astronomical time calculations, all verified against NASA reference data.
 
 ```typescript
 import { time } from "celestine";
@@ -185,21 +183,21 @@ console.log(time.J2000_EPOCH); // 2451545.0
 console.log(time.DAYS_PER_CENTURY); // 36525
 ```
 
-**제공 기능:**
+**Available:**
 
-- 율리우스일 ↔ 달력 날짜 (Meeus 알고리즘, 그레고리력/율리우스력 처리)
-- J2000.0 기준점부터의 율리우스 세기
-- 그리니치 평균 항성시 및 지방 항성시
-- ΔT 보정 (Espenak & Meeus 다항식, NASA 데이터에 대해 검증)
-- 날짜/시간 검증 (윤년, 월 경계 등)
-- 시간 유틸리티 (각도 정규화, 변환, 포매팅)
-- 36개의 천문 상수 (J2000, Unix 기준점, 항성일 등)
+- Julian Date ↔ Calendar Date (Meeus algorithm, handles Gregorian/Julian calendars)
+- Julian Centuries from J2000.0 epoch
+- Greenwich Mean Sidereal Time & Local Sidereal Time
+- ΔT corrections (Espenak & Meeus polynomials, verified against NASA data)
+- Date/time validation (leap years, month boundaries, etc.)
+- Time utilities (angle normalization, conversions, formatting)
+- 36 astronomical constants (J2000, Unix epoch, sidereal day, etc.)
 
-모든 계산은 권위 있는 자료(Meeus, NASA, IERS)에 기반하며, 17개의 NASA 공식 기준값을 포함한 309개 단위 테스트로 검증되었습니다.
+All calculations are based on authoritative sources (Meeus, NASA, IERS) and tested against 309 unit tests including 17 NASA official reference values.
 
-### 하우스 계산 House Calculations
+### House Calculations
 
-여러 하우스 시스템을 사용해 점성술 하우스 커스프(cusp)와 앵글(angle)을 계산하며, 모두 Swiss Ephemeris에 대해 검증됩니다.
+Calculate astrological house cusps and angles using multiple house systems, all verified against Swiss Ephemeris.
 
 ```typescript
 import { houses } from "celestine";
@@ -230,19 +228,19 @@ const systems = [
 ];
 ```
 
-**제공 기능:**
+**Available:**
 
-- 7종 하우스 시스템 (Placidus, Koch, Equal, Whole Sign, Porphyry, Regiomontanus, Campanus)
-- ASC, MC, DSC, IC(차트 앵글) 계산
-- 황도 경사각(obliquity of ecliptic) (Laskar 1986 공식)
-- 유용한 오류 메시지를 갖춘 지리 위치 검증
-- 하우스 위치 조회 및 황도대 유틸리티
-- 복잡한 시스템에 대한 Swiss Ephemeris 알고리즘의 직접 포팅
-- 천문학적 원리(각도 관계, 하우스 간격, 적도 거동)에 대해 검증됨
+- 7 house systems (Placidus, Koch, Equal, Whole Sign, Porphyry, Regiomontanus, Campanus)
+- Calculate ASC, MC, DSC, IC (chart angles)
+- Obliquity of ecliptic (Laskar 1986 formula)
+- Geographic location validation with helpful error messages
+- House position lookup & zodiac utilities
+- Direct ports of Swiss Ephemeris algorithms for complex systems
+- Verified against astronomical principles (angle relationships, house spacing, equatorial behavior)
 
-### 황도대 시스템 & 행성 품위 Zodiac System & Planetary Dignities
+### Zodiac System & Planetary Dignities
 
-전통 점성술 교리에 기반해 회귀 황도대 위치와 본질적 품위를 계산합니다.
+Calculate tropical zodiac positions and essential dignities based on traditional astrological doctrine.
 
 ```typescript
 import { zodiac } from "celestine";
@@ -296,22 +294,22 @@ const formatted = zodiac.formatZodiacPosition(venus, {
 // "7°24' ♏"
 ```
 
-**제공 기능:**
+**Available:**
 
-- 황도 경도 → 황도대 별자리 + DMS(도/분/초)
-- 완전한 별자리 속성 (원소, 양태(modality), 극성, 지배성, 심볼)
-- 본질적 품위 (입궁/도미사일, 고양(exaltation), 손상(detriment), 추락(fall), 페러그린(peregrine))
-- 전통 체계에 따른 강도 점수 (+5, +4, 0, -4, -5)
-- 전통 지배성(Ptolemy) + 현대 지배성(천왕성, 해왕성, 명왕성)
-- 정확한 고양 도수 (태양 양자리 19°, 화성 염소자리 28° 등)
-- 모든 별자리(♈-♓)와 행성(☉☽☿♀♂♃♄♅♆♇)에 대한 유니코드 심볼
-- 유연한 포매팅 옵션 (심볼, 십진 도수, DMS)
-- Swiss Ephemeris에 대해 검증된 알고리즘
-- 모든 데이터가 Ptolemy의 "Tetrabiblos"와 Lilly의 "Christian Astrology"에 대해 검증됨
+- Ecliptic longitude → Zodiac sign + DMS (degrees/minutes/seconds)
+- Complete sign properties (element, modality, polarity, rulers, symbols)
+- Essential dignities (domicile, exaltation, detriment, fall, peregrine)
+- Strength scoring (+5, +4, 0, -4, -5) per traditional system
+- Traditional rulers (Ptolemy) + modern rulers (Uranus, Neptune, Pluto)
+- Exact exaltation degrees (19° Aries for Sun, 28° Capricorn for Mars, etc.)
+- Unicode symbols for all signs (♈-♓) and planets (☉☽☿♀♂♃♄♅♆♇)
+- Flexible formatting options (symbols, decimal degrees, DMS)
+- Algorithm verified against Swiss Ephemeris
+- All data verified against Ptolemy's "Tetrabiblos" and Lilly's "Christian Astrology"
 
-### 애스펙트 Aspects — 각 관계
+### Aspects (Angular Relationships)
 
-설정 가능한 오브, 패턴 감지, 접근/분리 지표와 함께 천체 간 애스펙트를 계산합니다.
+Calculate aspects between celestial bodies with configurable orbs, patterns detection, and applying/separating indicators.
 
 ```typescript
 import { aspects, ephemeris, time } from "celestine";
@@ -362,34 +360,34 @@ if (match) {
 }
 ```
 
-**지원 애스펙트 (14종):**
+**Available Aspects (14 types):**
 
-- **메이저(프톨레마이오스)**: 합 ☌, 섹스타일 ⚹, 스퀘어 □, 트라인 △, 어포지션 ☍
-- **마이너**: 세미섹스타일 ⚺, 세미스퀘어 ∠, 퀸타일 Q, 세스퀴쿼드레이트 ⚼, 바이퀸타일 bQ, 퀸컹크스 ⚻
-- **케플러**: 셉타일 S (360°/7), 노바일 N (360°/9), 데사일 D (360°/10)
+- **Major (Ptolemaic)**: Conjunction ☌, Sextile ⚹, Square □, Trine △, Opposition ☍
+- **Minor**: Semi-sextile ⚺, Semi-square ∠, Quintile Q, Sesquiquadrate ⚼, Biquintile bQ, Quincunx ⚻
+- **Kepler**: Septile S (360°/7), Novile N (360°/9), Decile D (360°/10)
 
-**애스펙트 패턴:**
+**Aspect Patterns:**
 
-- T-스퀘어 (어포지션 + 스퀘어 2개)
-- 그랜드 트라인 (트라인 3개)
-- 그랜드 크로스 (스퀘어 4개 + 어포지션 2개)
-- 요드 / 신의 손가락 (퀸컹크스 2개 + 섹스타일)
-- 카이트 (그랜드 트라인 + 어포지션)
-- 미스틱 렉탱글 (어포지션 2개 + 트라인 2개 + 섹스타일 2개)
-- 스텔리움 (합 3개 이상)
+- T-Square (Opposition + 2 Squares)
+- Grand Trine (3 Trines)
+- Grand Cross (4 Squares + 2 Oppositions)
+- Yod / Finger of God (2 Quincunxes + Sextile)
+- Kite (Grand Trine + Opposition)
+- Mystic Rectangle (2 Oppositions + 2 Trines + 2 Sextiles)
+- Stellium (3+ Conjunctions)
 
-**특징:**
+**Features:**
 
-- 애스펙트 종류별 설정 가능한 오브
-- 강도 계산 (100% = 정확, 오브 가장자리로 갈수록 감소)
-- 접근(applying) vs 분리(separating) 애스펙트 감지
-- 별자리를 벗어난(dissociate) 애스펙트 감지
-- 복잡한 구성에 대한 패턴 감지
-- 수학적으로 정확한 각도의 케플러 애스펙트 ("Harmonices Mundi", 1619)
+- Configurable orbs per aspect type
+- Strength calculation (100% = exact, decreasing to orb edge)
+- Applying vs separating aspect detection
+- Out-of-sign (dissociate) aspect detection
+- Pattern detection for complex configurations
+- Kepler aspects with mathematically exact angles (from "Harmonices Mundi", 1619)
 
-### 출생 차트 Birth Charts
+### Birth Charts
 
-모든 모듈을 하나의 일관된 API로 결합해 완전한 점성술 출생 차트를 계산합니다. 모든 계산은 Swiss Ephemeris에 대해 검증됩니다.
+Calculate complete astrological birth charts by combining all modules into a cohesive API. All calculations verified against Swiss Ephemeris.
 
 ```typescript
 import { calculateChart, CelestialBody } from "celestine";
@@ -441,7 +439,7 @@ console.log(chart.summary.patterns);
 // [{ type: 'TSquare', bodies: ['Sun', 'Moon', 'Saturn'] }]
 ```
 
-**차트 옵션:**
+**Chart Options:**
 
 ```typescript
 const chart = calculateChart(birthData, {
@@ -456,7 +454,7 @@ const chart = calculateChart(birthData, {
 });
 ```
 
-**그 외 제공:**
+**Also Available:**
 
 ```typescript
 import {
@@ -487,21 +485,21 @@ console.log(formatChart(chart, "text"));
 const systems = getAvailableHouseSystems(); // ['placidus', 'koch', ...]
 ```
 
-**특징:**
+**Features:**
 
-- 행성, 하우스, 애스펙트, 요약을 갖춘 완전한 출생 차트
-- 7종 하우스 시스템 모두 지원
-- 각 행성에 대한 자동 품위 계산
-- 애스펙트 패턴 감지 (T-스퀘어, 그랜드 트라인, 요드 등)
-- 원소/양태/극성 분포 분석
-- 반구(hemisphere) 및 사분면(quadrant) 강조 분석
-- 역행 행성 추적
-- Swiss Ephemeris 기준 데이터에 대해 검증
-- 아인슈타인의 차트를 Swiss Ephemeris 2.10.03에 대해 검증
+- Complete birth chart with planets, houses, aspects, and summary
+- All 7 house systems supported
+- Automatic dignity calculation for each planet
+- Aspect patterns detection (T-Square, Grand Trine, Yod, etc.)
+- Element/modality/polarity distribution analysis
+- Hemisphere and quadrant emphasis
+- Retrograde planet tracking
+- Validated against Swiss Ephemeris reference data
+- Einstein's chart verified against Swiss Ephemeris 2.10.03
 
-### 트랜짓 Transits — 예측 점성술
+### Transits (Predictive Astrology)
 
-현재 행성 위치가 출생 차트 위치와 애스펙트를 이루는 시점을 계산합니다 — 예측 점성술의 토대입니다.
+Calculate when current planetary positions form aspects to natal chart positions — the foundation of predictive astrology.
 
 ```typescript
 import { transits, time, type NatalPoint } from "celestine";
@@ -571,29 +569,29 @@ for (const period of mercuryRx) {
 }
 ```
 
-**트랜짓 종류:**
+**Transit Types:**
 
-- **행성-행성(Planet-to-Planet)**: 트랜짓 토성이 출생 태양과 스퀘어
-- **행성-앵글(Planet-to-Angle)**: 트랜짓 목성이 출생 ASC와 합
-- **행성-하우스(Planet-to-House)**: 화성이 7번째 하우스에 진입
-- **역행 트랜짓(Retrograde Transits)**: 역행 운동으로 인한 다중 통과
+- **Planet-to-Planet**: Transiting Saturn square natal Sun
+- **Planet-to-Angle**: Transiting Jupiter conjunct natal ASC
+- **Planet-to-House**: Mars enters the 7th house
+- **Retrograde Transits**: Multiple passes due to retrograde motion
 
-**특징:**
+**Features:**
 
-- 접근/분리 위상을 갖춘 트랜짓 감지
-- 강도 계산 (100% = 정확, 오브 가장자리로 갈수록 감소)
-- 광체와 앵글에 대한 확장이 가능한 설정형 오브
-- 이분 탐색(binary search)을 통한 정확한 트랜짓 시각 탐색
-- 전체 트랜짓 기간에 대한 오브 진입/이탈 타이밍
-- 하우스 진입(ingress) 감지 (행성이 출생 하우스에 진입/이탈)
-- 정류점(station point) 감지를 포함한 역행 운동 처리
-- 느린 행성에 대한 다중 트랜짓 통과
-- 월/천체/출생점별 그룹화를 갖춘 날짜 범위 검색
-- 역사적 트랜짓 사건 및 Swiss Ephemeris에 대해 검증
+- Transit detection with applying/separating phase
+- Strength calculation (100% = exact, decreasing to orb edge)
+- Configurable orbs with extensions for luminaries and angles
+- Exact transit time finding via binary search
+- Orb entry/exit timing for full transit duration
+- House ingress detection (planet enters/exits natal houses)
+- Retrograde motion handling with station point detection
+- Multiple transit passes for slow planets
+- Date range search with grouping by month/body/natal point
+- Validated against historical transit events and Swiss Ephemeris
 
-### 프로그레션 Progressions — 예측 점성술
+### Progressions (Predictive Astrology)
 
-2차 프로그레션, 솔라 아크 디렉션 및 기타 프로그레션 기법을 사용해 출생 차트가 시간에 따라 어떻게 전개되는지 계산합니다.
+Calculate how the natal chart evolves over time using secondary progressions, solar arc directions, and other progression techniques.
 
 ```typescript
 import {
@@ -666,31 +664,31 @@ console.log(`Solar Arc: ${progressions.formatSolarArc(solarArc)}`);
 console.log(formatProgressedChart(result));
 ```
 
-**프로그레션 종류:**
+**Progression Types:**
 
-- **2차 프로그레션(Secondary Progressions)**: 1일 = 1년 (가장 흔한 기법)
-- **솔라 아크 디렉션(Solar Arc Directions)**: 모든 점이 태양의 프로그레션 운동만큼 전진
-- **마이너 프로그레션(Minor Progressions)**: 항성월 1개월 = 1년
-- **3차 프로그레션(Tertiary Progressions)**: 1일 = 1개월
+- **Secondary Progressions**: 1 day = 1 year (most common technique)
+- **Solar Arc Directions**: All points advance by Sun's progressed motion
+- **Minor Progressions**: 1 sidereal month = 1 year
+- **Tertiary Progressions**: 1 day = 1 month
 
-**특징:**
+**Features:**
 
-- 완전한 프로그레션 차트 계산
-- 솔라 아크 계산 및 디렉션
-- 프로그레션-출생 애스펙트 감지
-- 모든 천체의 별자리 변경 추적
-- 전문적인 프로그레션 달 분석
-- 달 별자리 이동 타임라인
-- 프로그레션 달 위상 계산
-- 다양한 프로그레션 종류 지원
-- 설정 가능한 오브 및 애스펙트 종류
-- 보기 좋게 포매팅된 출력
+- Complete progressed chart calculation
+- Solar arc calculations and directions
+- Progressed-to-natal aspect detection
+- Sign change tracking for all bodies
+- Specialized progressed Moon analysis
+- Moon sign transit timeline
+- Progressed lunar phase calculation
+- Multiple progression type support
+- Configurable orbs and aspect types
+- Beautiful formatted output
 
-## API 문서 API Documentation
+## API Documentation
 
-전체 API 문서는 [https://anonyfox.github.io/celestine](https://anonyfox.github.io/celestine) 에서 확인할 수 있습니다.
+Full API documentation is available at [https://anonyfox.github.io/celestine](https://anonyfox.github.io/celestine)
 
-## 개발 Development
+## Development
 
 ```bash
 npm install        # Install dependencies
@@ -705,9 +703,9 @@ npm run format     # Format code
 
 <div align="center">
 
-### 후원 Support
+### Support
 
-이 패키지가 여러분의 프로젝트에 도움이 된다면, 유지보수를 위한 스폰서를 고려해 주세요:
+If this package helps your project, consider sponsoring its maintenance:
 
 [![GitHub Sponsors](https://img.shields.io/badge/Sponsor-EA4AAA?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sponsors/Anonyfox)
 
