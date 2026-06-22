@@ -1,24 +1,12 @@
-# Celestine ✨
+# Celestine
 
-> 🇰🇷 이 저장소는 **molpass가 포크한 사본**입니다. 영어 원문은 [README.en.md](./README.en.md)를 참고하세요.
-
-[![npm version](https://img.shields.io/npm/v/celestine.svg?style=flat-square)](https://www.npmjs.com/package/celestine)
-[![npm downloads](https://img.shields.io/npm/dm/celestine.svg?style=flat-square)](https://www.npmjs.com/package/celestine)
-[![CI](https://img.shields.io/github/actions/workflow/status/Anonyfox/celestine/ci.yml?branch=main&label=CI&style=flat-square)](https://github.com/Anonyfox/celestine/actions/workflows/ci.yml)
-[![Documentation](https://img.shields.io/badge/docs-live-brightgreen?style=flat-square)](https://anonyfox.github.io/celestine)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18-green?style=flat-square&logo=node.js)](https://nodejs.org/)
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Anonyfox/celestine/main/assets/celestine-logo.png" alt="Celestine Logo" width="400" />
-</div>
+> 이 저장소는 molpass가 포크한 사본입니다. 영어 원문은 [README.en.md](./README.en.md)를 참고하세요.
 
 **군더더기 없는 점성술 계산.** Celestine은 출생 차트(birth chart), 트랜짓(transit), 프로그레션(progression), 그리고 진지한 점성술 소프트웨어에 필요한 모든 것을 위한 TypeScript 라이브러리입니다. 모든 계산은 NASA 데이터, JPL Horizons, 그리고 Swiss Ephemeris에 대해 검증됩니다 — "영감을 받았다"거나 "기반으로 했다"가 아니라, 천문학자들이 실제로 사용하는 원천 데이터와 바이트 단위로 일치하도록 검증됩니다.
 
 정밀도를 진정으로 중시하는 실무자를 위해 만들어졌습니다. 2400개 이상의 단위 테스트. 런타임 의존성 0개. 계산이 틀리면 테스트가 잡아냅니다. NASA가 화성이 127.4532°에 있다고 하면, Celestine도 127.4532°를 줍니다. 127.45°나 "대충 그 정도"가 아니라 — 매번 정확한 실제 숫자를 줍니다.
 
-## 기능 Features
+## 기능
 
 - ✅ **출생 차트(Birth Charts)** - 모든 모듈을 하나의 일관된 API로 결합한 완전한 차트 계산
 - ✅ **천체력(Ephemeris)** - 태양, 달, 모든 행성, 키론(Chiron), 4대 소행성, 달의 교점, 릴리스(Lilith), 파트(lots)
@@ -37,13 +25,13 @@
 - 🧪 **충분한 테스트** - 2400개 이상의 단위 테스트
 - 🚀 **런타임 의존성 0개** - 가볍고 빠름
 
-## 설치 Installation
+## 설치
 
 ```bash
 npm install celestine
 ```
 
-## 빠른 시작 Quick Start
+## 빠른 시작
 
 ```typescript
 import { calculateChart, ephemeris, time, zodiac } from "celestine";
@@ -79,7 +67,7 @@ const marsAries = zodiac.getPlanetaryDignity(
 console.log(marsAries.state); // "Domicile" (Mars rules Aries)
 ```
 
-## 사용법 Usage
+## 사용법
 
 ### 천체력(Ephemeris) — 행성 위치
 
@@ -135,7 +123,7 @@ console.log(sign); // "Sagittarius"
 - Jean Meeus의 "Astronomical Algorithms"와 VSOP87 이론에 기반
 - 모든 위치가 JPL Horizons 및 Swiss Ephemeris 기준 데이터에 대해 검증됨
 
-### 시간 계산 Time Calculations
+### 시간 계산
 
 Time 모듈은 NASA 기준 데이터에 대해 모두 검증된 포괄적인 천문 시간 계산을 제공합니다.
 
@@ -192,7 +180,7 @@ console.log(time.DAYS_PER_CENTURY); // 36525
 
 모든 계산은 권위 있는 자료(Meeus, NASA, IERS)에 기반하며, 17개의 NASA 공식 기준값을 포함한 309개 단위 테스트로 검증되었습니다.
 
-### 하우스 계산 House Calculations
+### 하우스 계산
 
 여러 하우스 시스템을 사용해 점성술 하우스 커스프(cusp)와 앵글(angle)을 계산하며, 모두 Swiss Ephemeris에 대해 검증됩니다.
 
@@ -235,7 +223,7 @@ const systems = [
 - 복잡한 시스템에 대한 Swiss Ephemeris 알고리즘의 직접 포팅
 - 천문학적 원리(각도 관계, 하우스 간격, 적도 거동)에 대해 검증됨
 
-### 황도대 시스템 & 행성 품위 Zodiac System & Planetary Dignities
+### 황도대 시스템 & 행성 품위
 
 전통 점성술 교리에 기반해 회귀 황도대 위치와 본질적 품위를 계산합니다.
 
@@ -304,7 +292,7 @@ const formatted = zodiac.formatZodiacPosition(venus, {
 - Swiss Ephemeris에 대해 검증된 알고리즘
 - 모든 데이터가 Ptolemy의 "Tetrabiblos"와 Lilly의 "Christian Astrology"에 대해 검증됨
 
-### 애스펙트 Aspects — 각 관계
+### 애스펙트 — 각 관계
 
 설정 가능한 오브, 패턴 감지, 접근/분리 지표와 함께 천체 간 애스펙트를 계산합니다.
 
@@ -382,7 +370,7 @@ if (match) {
 - 복잡한 구성에 대한 패턴 감지
 - 수학적으로 정확한 각도의 케플러 애스펙트 ("Harmonices Mundi", 1619)
 
-### 출생 차트 Birth Charts
+### 출생 차트
 
 모든 모듈을 하나의 일관된 API로 결합해 완전한 점성술 출생 차트를 계산합니다. 모든 계산은 Swiss Ephemeris에 대해 검증됩니다.
 
@@ -494,7 +482,7 @@ const systems = getAvailableHouseSystems(); // ['placidus', 'koch', ...]
 - Swiss Ephemeris 기준 데이터에 대해 검증
 - 아인슈타인의 차트를 Swiss Ephemeris 2.10.03에 대해 검증
 
-### 트랜짓 Transits — 예측 점성술
+### 트랜짓 — 예측 점성술
 
 현재 행성 위치가 출생 차트 위치와 애스펙트를 이루는 시점을 계산합니다 — 예측 점성술의 토대입니다.
 
@@ -586,7 +574,7 @@ for (const period of mercuryRx) {
 - 월/천체/출생점별 그룹화를 갖춘 날짜 범위 검색
 - 역사적 트랜짓 사건 및 Swiss Ephemeris에 대해 검증
 
-### 프로그레션 Progressions — 예측 점성술
+### 프로그레션 — 예측 점성술
 
 2차 프로그레션, 솔라 아크 디렉션 및 기타 프로그레션 기법을 사용해 출생 차트가 시간에 따라 어떻게 전개되는지 계산합니다.
 
@@ -681,11 +669,11 @@ console.log(formatProgressedChart(result));
 - 설정 가능한 오브 및 애스펙트 종류
 - 보기 좋게 포매팅된 출력
 
-## API 문서 API Documentation
+## API 문서
 
 전체 API 문서는 [https://anonyfox.github.io/celestine](https://anonyfox.github.io/celestine) 에서 확인할 수 있습니다.
 
-## 개발 Development
+## 개발
 
 ```bash
 npm install        # Install dependencies
