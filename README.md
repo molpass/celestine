@@ -9,7 +9,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18-green?style=flat-square&logo=node.js)](https://nodejs.org/)
-[![Live Demo](https://img.shields.io/badge/demo-cosmolytic.com-7c3aed?style=flat-square)](https://cosmolytic.com)
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/Anonyfox/celestine/main/assets/celestine-logo.png" alt="Celestine Logo" width="400" />
@@ -18,10 +17,6 @@
 **군더더기 없는 점성술 계산.** Celestine은 출생 차트(birth chart), 트랜짓(transit), 프로그레션(progression), 그리고 진지한 점성술 소프트웨어에 필요한 모든 것을 위한 TypeScript 라이브러리입니다. 모든 계산은 NASA 데이터, JPL Horizons, 그리고 Swiss Ephemeris에 대해 검증됩니다 — "영감을 받았다"거나 "기반으로 했다"가 아니라, 천문학자들이 실제로 사용하는 원천 데이터와 바이트 단위로 일치하도록 검증됩니다.
 
 정밀도를 진정으로 중시하는 실무자를 위해 만들어졌습니다. 2400개 이상의 단위 테스트. 런타임 의존성 0개. 계산이 틀리면 테스트가 잡아냅니다. NASA가 화성이 127.4532°에 있다고 하면, Celestine도 127.4532°를 줍니다. 127.45°나 "대충 그 정도"가 아니라 — 매번 정확한 실제 숫자를 줍니다.
-
-## 실제 동작 보기
-
-**[Cosmolytic](https://cosmolytic.com)**은 전적으로 Celestine 위에 구축되었습니다 — 실시간 행성 위치, 달의 위상, 일일 운세, 출생 차트 등 모든 것을 다룹니다. 이 계산들이 실제 제품에서 어떻게 보이는지 확인하고 싶다면, 그것이 바로 여러분의 라이브 데모입니다.
 
 ## 기능 Features
 
@@ -704,14 +699,6 @@ npm run format     # Format code
 ---
 
 <div align="center">
-
-### 후원 Support
-
-이 패키지가 여러분의 프로젝트에 도움이 된다면, 유지보수를 위한 스폰서를 고려해 주세요:
-
-[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-EA4AAA?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sponsors/Anonyfox)
-
----
 
 **[Anonyfox](https://anonyfox.com) • [MIT License](LICENSE)**
 
